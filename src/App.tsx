@@ -11,12 +11,9 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Main />
-      },
-      {
-        path: '/',
         element: (
           <>
+            <Main />
             <Rows rowID="1" title='Up Coming' fetchURL={requests.requestUpcoming} />
             <Rows rowID="2" title='Popular' fetchURL={requests.requestPopular} />
             <Rows rowID="3" title='Trending' fetchURL={requests.requestTrending} />
@@ -24,7 +21,7 @@ const router = createBrowserRouter([
             <Rows rowID="5" title='Horror' fetchURL={requests.requestHorror} />
           </>
         )
-      }
+      },
     ]
   }
 ])
